@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20Carian:700|Noto%20Sans%20Carian:400');
+@import url('https://fonts.googleapis.com/css?family=Encode%20Sans%20Expanded:700|Encode%20Sans%20Expanded:400');
+
+:root {
+    --backgroundColor: #0D1512;
+    --backgroundColor2: #121C18;
+    --primaryColor: #EEEEEE;
+    --secondaryColor: #ADF0D4;
+    --tertiaryColor: #1fd8a4;
+    --btnColor: #114837;
+    --componentColor: #114837;
+    --borderSeparation: 1px solid #2A7E68;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: 'Noto Sans Carian';
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Noto Sans Carian';
+  font-weight: 700;
+  color: var(--tertiaryColor);
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {
+    font-size: 2.369rem; /* 37.92px */
+    color: #1FD8A4;
+}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+p {
+    font-size: 1.5rem; /* 16px */
+    font-family: 'Encode Sans Expanded';
+    font-weight: 400;
+    color: var(--primaryColor);
+}
+
+.title {
+    background: #EEEEEE; /* Couleur de fond pour les navigateurs qui ne supportent pas les dégradés */
+    background: linear-gradient(to right, #EEEEEE 0%, #1fd8a4 90%, #114837 100%);
+    -webkit-background-clip: text; /* Spécifique à WebKit pour clipper le fond au texte */
+    color: transparent; /* Rend le texte transparent pour que le dégradé apparaisse */
+    background-clip: text; /* Clippe le fond au texte */
+    display: inline-block;
+}
+
+.custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255,255,255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar li a {
+    color: var(--primaryColor);
+    &:hover{
+        color: var(--tertiaryColor);
+    }
+}
+
+main {
+    margin-top: 12rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn {
+    background-color: var(--btnColor);
+    color: var(--primaryColor);
+    border-radius: 5rem;
+    
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none; /* Enlève le soulignement pour tous les états */
+}
+
+
+.btn:hover {
+    background-color: var(--secondaryColor);
+    color: var(--backgroundColor);
+}
+
+.photo {
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    display: block;
+    margin-right: 50px;
+}
+
+ .projects {
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.card {
+    width: 25rem; 
+    position: relative; 
+    overflow: hidden; 
+    min-height: 17rem;
+}
+
+.card-img-top {
+    width: 100%; 
+    display: block; 
+    transition: transform 0.5s ease; 
+    object-fit: cover;
+}
+
+.card-body {
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    right: 0; 
+    background-color: var(--backgroundColor2); 
+    transform: translateY(100%); 
+    transition: transform 0.5s ease; 
+    border: 5px solid var(--borderSeparation);
+    border-radius: 0 0 10px 10px;
+    border-color: var(--borderSeparation);
+  }
+  
+  .card:hover .card-body {
+    transform: translateY(0); 
+    
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.1); 
+  }
+  
+  .card a {
+      text-decoration: none;
+      color: var(--tertiaryColor);
+  }
+
+@mixin logo {
+    width: 70px;
+    height: 70px;
+}
+
+@mixin hover {
+ &:hover {
+    transform: scale(1.5);
+    transition: transform ease 0.3s;
+ }
+}
+
+.react, .javascript, .symfony, .sass, .php, .git, .figma, .mysql{
+    @include logo;
+    @include hover;
+}
+
+.javascript {
+    border-radius: 10px;  
+}
+
+.react {
+    animation: rotation-animation 5s infinite linear;
+
+    &:hover {
+        transform: scale(1.5) rotate(360deg); // La rotation ici est symbolique pour l'exemple.
+    }
+}
+
+@keyframes rotation-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.paragraph {
+    text-align: justify;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: var(--primaryColor);
+}
+
+
+.form-control:focus {
+    border: 4px solid var(--tertiaryColor);
+    outline: none;
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0d1512;
+}
+
+.background span {
+    width: 11vmin;
+    height: 11vmin;
+    border-radius: 11vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 27;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #1fd8a4;
+    top: 87%;
+    left: 33%;
+    animation-duration: 54s;
+    animation-delay: -209s;
+    transform-origin: 8vw 19vh;
+    box-shadow: 22vmin 0 3.606815652437621vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #2a7e68;
+    top: 86%;
+    left: 88%;
+    animation-duration: 18s;
+    animation-delay: -224s;
+    transform-origin: -7vw -8vh;
+    box-shadow: 22vmin 0 2.962928636214853vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #1fd8a4;
+    top: 82%;
+    left: 47%;
+    animation-duration: 126s;
+    animation-delay: -47s;
+    transform-origin: -5vw 0vh;
+    box-shadow: -22vmin 0 2.8454965359326923vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #1fd8a4;
+    top: 39%;
+    left: 10%;
+    animation-duration: 211s;
+    animation-delay: -193s;
+    transform-origin: -16vw 15vh;
+    box-shadow: -22vmin 0 2.9498920222861837vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #1fd8a4;
+    top: 49%;
+    left: 60%;
+    animation-duration: 232s;
+    animation-delay: -163s;
+    transform-origin: 1vw 19vh;
+    box-shadow: 22vmin 0 2.8854635087780087vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #1fd8a4;
+    top: 49%;
+    left: 91%;
+    animation-duration: 54s;
+    animation-delay: -92s;
+    transform-origin: 7vw 1vh;
+    box-shadow: -22vmin 0 3.458303759761664vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #114837;
+    top: 75%;
+    left: 32%;
+    animation-duration: 119s;
+    animation-delay: -89s;
+    transform-origin: 3vw 4vh;
+    box-shadow: 22vmin 0 3.525135618843395vmin currentColor;
+}
+
+  
+/* .background span:nth-child(7) {
+    color: #2a7e68;
+    top: 36%;
+    left: 26%;
+    animation-duration: 96s;
+    animation-delay: -99s;
+    transform-origin: -6vw 8vh;
+    box-shadow: -22vmin 0 3.71569824360395vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #114837;
+    top: 15%;
+    left: 38%;
+    animation-duration: 91s;
+    animation-delay: -9s;
+    transform-origin: 1vw 15vh;
+    box-shadow: 22vmin 0 3.2884370991575658vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #2a7e68;
+    top: 72%;
+    left: 49%;
+    animation-duration: 222s;
+    animation-delay: -227s;
+    transform-origin: -8vw 24vh;
+    box-shadow: -22vmin 0 3.1878239933867776vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #114837;
+    top: 88%;
+    left: 63%;
+    animation-duration: 26s;
+    animation-delay: -129s;
+    transform-origin: -19vw 14vh;
+    box-shadow: 22vmin 0 3.6154831669251104vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #114837;
+    top: 52%;
+    left: 44%;
+    animation-duration: 29s;
+    animation-delay: -144s;
+    transform-origin: 1vw -8vh;
+    box-shadow: 22vmin 0 3.650818610845419vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #1fd8a4;
+    top: 57%;
+    left: 25%;
+    animation-duration: 85s;
+    animation-delay: -214s;
+    transform-origin: 2vw 9vh;
+    box-shadow: -22vmin 0 3.3047420597703514vmin currentColor;
+}
+ */
+
+ .custom-alert {
+    position: fixed; /* Positionnement fixe au milieu de l'écran */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* S'assurer qu'elle est au-dessus des autres contenus */
+    padding: 20px;
+    background: var(--tertiaryColor);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    color: var(--backgroundColor2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-alert-content {
+    text-align: center;
+}
+
+
+ /*************/
+ /* Responsive */
+ /*************/
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .background span {
+        animation: none !important;
+        position: static;
+    }
+
+    span {
+        display: none;
+    }
+
+    h2 {
+        font-size: 2.369rem;
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 1.777rem;
+        margin-top: 0;
+    }
+    main {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    main .title {
+        font-size: 2.369rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    main p {
+        text-align: center;
+    }
+
+    .main button {
+        margin-left: 30px;
+    }
+
+    .photo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 200px;
+        height: 200px;
+    }
+    .projects {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+    .card {
+        width: 20rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .card-img-top {
+        width: 100%;
+    }
+    .paragraph {
+        font-size: 1.2rem;
+    }
+
+    .backend {
+        margin-top: 2rem;
+    }
+}
