@@ -4,14 +4,14 @@ const cardsData = [
         title: 'Semimarathon de La Rochelle',
         text: "First official website!!! It was created for the 43rd edition of the La Rochelle half marathon.",
         link: "https://semimarathonlarochelle.fr/",
-        technologies: ["HTML", "CSS", "PHP"]
+        technologies: ["CSS", "PHP"]
     },
     {
         img: 'assets/img/willrunexpert.png',
         title: 'WillRunExpert',
         text: "Individual coaching website to improve running performance.",
         link: "https://willrunexpert.fr/",
-        technologies: ["HTML", "SASS", "PHP", "MySQL"]
+        technologies: ["SASS", "PHP", "MySQL"]
     },
     {
         img: 'assets/img/default.jpg',

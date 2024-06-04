@@ -88,6 +88,7 @@ main {
     background-color: var(--btnColor);
     color: var(--primaryColor);
     border-radius: 5rem;
+    margin-right: 2rem;
     
 }
 
@@ -170,9 +171,9 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @mixin hover {
+    transition: transform ease 0.5s;
  &:hover {
     transform: scale(1.5);
-    transition: transform ease 0.3s;
  }
 }
 
@@ -306,64 +307,7 @@ a:link, a:visited, a:hover, a:active {
     transform-origin: 3vw 4vh;
     box-shadow: 22vmin 0 3.525135618843395vmin currentColor;
 }
-
   
-/* .background span:nth-child(7) {
-    color: #2a7e68;
-    top: 36%;
-    left: 26%;
-    animation-duration: 96s;
-    animation-delay: -99s;
-    transform-origin: -6vw 8vh;
-    box-shadow: -22vmin 0 3.71569824360395vmin currentColor;
-}
-.background span:nth-child(8) {
-    color: #114837;
-    top: 15%;
-    left: 38%;
-    animation-duration: 91s;
-    animation-delay: -9s;
-    transform-origin: 1vw 15vh;
-    box-shadow: 22vmin 0 3.2884370991575658vmin currentColor;
-}
-.background span:nth-child(9) {
-    color: #2a7e68;
-    top: 72%;
-    left: 49%;
-    animation-duration: 222s;
-    animation-delay: -227s;
-    transform-origin: -8vw 24vh;
-    box-shadow: -22vmin 0 3.1878239933867776vmin currentColor;
-}
-.background span:nth-child(10) {
-    color: #114837;
-    top: 88%;
-    left: 63%;
-    animation-duration: 26s;
-    animation-delay: -129s;
-    transform-origin: -19vw 14vh;
-    box-shadow: 22vmin 0 3.6154831669251104vmin currentColor;
-}
-.background span:nth-child(11) {
-    color: #114837;
-    top: 52%;
-    left: 44%;
-    animation-duration: 29s;
-    animation-delay: -144s;
-    transform-origin: 1vw -8vh;
-    box-shadow: 22vmin 0 3.650818610845419vmin currentColor;
-}
-.background span:nth-child(12) {
-    color: #1fd8a4;
-    top: 57%;
-    left: 25%;
-    animation-duration: 85s;
-    animation-delay: -214s;
-    transform-origin: 2vw 9vh;
-    box-shadow: -22vmin 0 3.3047420597703514vmin currentColor;
-}
- */
-
  .custom-alert {
     position: fixed; /* Positionnement fixe au milieu de l'écran */
     left: 50%;
@@ -437,25 +381,38 @@ a:link, a:visited, a:hover, a:active {
         margin-left: 30px;
     }
 
+    .reseaux {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
     .photo {
         display: block;
         margin: 0 auto;
         margin-top: 2rem;
+        margin-bottom: 1.5rem;
         width: 200px;
         height: 200px;
     }
     .projects {
-        margin-top: 2rem;
-        margin-bottom: 5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
     }
     .card {
         width: 20rem;
         margin: 0 auto;
         margin-bottom: 2rem;
+        min-height: 14rem;
     }
     .card-img-top {
         width: 100%;
     }
+
+    .card-text {
+        font-size: 1rem;
+    }
+
     .paragraph {
         font-size: 1.2rem;
     }
@@ -464,3 +421,4 @@ a:link, a:visited, a:hover, a:active {
         margin-top: 2rem;
     }
 }
+
