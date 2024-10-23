@@ -90,6 +90,12 @@ p {
   color: var(--tertiaryColor);
 }
 
+.flag {
+  cursor: pointer;
+  margin-right: 40px;
+  margin-top: 5px;
+}
+
 main {
   margin-top: 12rem;
   margin-left: 0;
@@ -172,6 +178,11 @@ a:link, a:visited, a:hover, a:active {
 
 .card a {
   text-decoration: none;
+  color: var(--tertiaryColor);
+}
+
+.titleCardToChange {
+  font-size: 1.5rem;
   color: var(--tertiaryColor);
 }
 
@@ -348,6 +359,10 @@ a:link, a:visited, a:hover, a:active {
   }
   span {
     display: none;
+  }
+  .flag {
+    margin-bottom: 50px;
+    margin-left: 20px;
   }
   h2 {
     font-size: 2.369rem;

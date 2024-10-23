@@ -14,17 +14,17 @@ const cardsData = [
         technologies: ["SASS", "PHP", "MySQL"]
     },
     {
-        img: 'assets/img/default.jpg',
-        title: 'Currently in development',
-        text: "Currently in development",
-        link: "#",
-        technologies: []
+        img: 'assets/img/mammamia.png',
+        title: 'Mamma Mia',
+        text: "Italian restaurant website, near La Rochelle (Périgny).",
+        link: "https://mammamia-lr.com/",
+        technologies: ["SASS", "PHP"]
     },
 
 ];
 
 function displayCards(cards) {
-    const container = document.getElementById('cardsContainer'); // Assure-toi d'avoir un élément avec id="cardsContainer" dans ton HTML
+    const container = document.getElementById('cardsContainer'); 
   
     cards.forEach(card => {
       const colDiv = document.createElement('div');
@@ -42,14 +42,14 @@ function displayCards(cards) {
       cardBodyDiv.classList.add('card-body');
   
       const title = document.createElement('h5');
-      title.classList.add('card-title');
+      title.classList.add('card-title', 'titleCardToChange');
       const titleLink = document.createElement('a');
       titleLink.setAttribute('href', card.link);
       titleLink.textContent = card.title;
       title.appendChild(titleLink);
   
       const text = document.createElement('p');
-      text.classList.add('card-text');
+      text.classList.add('card-text', 'textCardToChange');
       text.textContent = card.text;
   
       cardBodyDiv.appendChild(title);
@@ -109,3 +109,66 @@ function showCustomAlert(message) {
 function closeCustomAlert() {
     document.getElementById('customAlert').style.display = 'none'; // Cache la modal
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+   const frenchFlag = document.getElementById('frenchFlag');
+   const britishFlag = document.getElementById('britishFlag');
+   const textsToChange = document.querySelectorAll('.textToChange');
+   const titleToChange = document.querySelectorAll('.titleToChange');
+   const textCardsToChange = document.querySelectorAll('.textCardToChange');
+   const titleCardsToChange = document.querySelectorAll('.titleCardToChange');
+
+    frenchFlag.addEventListener('click', () => {
+
+        const frenchTexts = [
+            'Accueil',
+            'Projets',
+            'Technos',
+            'À propos',
+            'Contact',
+            'JE SUIS JULIEN',
+            'Développeur Web Full Stack',
+            'Découvrez mes projets',
+            'Bonjour ! Je suis Julien, un développeur web passionné par la création de solutions numériques élégantes et performantes. Ce qui me motive chaque jour, c\'est l\'opportunité de transformer une idée abstraite en une application web fonctionnelle qui répond aux besoins des utilisateurs. Si vous recherchez quelqu\'un qui peut non seulement coder mais aussi apporter des idées créatives et des solutions efficaces, je suis le candidat idéal.',
+            'Prénom',
+            'Nom',
+            'Email',
+            'Votre message',
+            'Envoyer',
+        ]
+         
+        const frenchTitles = [
+            'MES PROJETS',
+            'TECHNOS',
+            'QUI SUIS-JE ?',
+        ]
+
+        const frenchTextCards = [
+            '1er site officiel du semi-marathon de La Rochelle, créé pour la 43ème édition.',
+            'Site de coaching individuel pour améliorer les performances en course à pied.',
+            'Brasserie italienne située à La Rochelle (Périgny).',
+        ]
+
+        const frenchTitleCards = [
+            'Semimarathon de La Rochelle',
+            'WillRunExpert',
+            'Mamma Mia',
+        ]
+
+        textsToChange.forEach((text, index) => {
+            text.textContent = frenchTexts[index];
+        });
+
+        titleToChange.forEach((title, index) => {
+            title.textContent = frenchTitles[index];
+        });
+
+        textCardsToChange.forEach((textCard, index) => {
+            textCard.textContent = frenchTextCards[index];
+        });
+        titleCardsToChange.forEach((titleCard, index) => {
+            titleCard.textContent = frenchTitleCards[index];
+        });
+    });
+
+});

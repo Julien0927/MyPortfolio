@@ -13,6 +13,14 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 try {
+
+    // Vérifie si le nom se termine par "Nor"
+    $name = $_POST['name']; // ou récupère le nom de la personne
+    if (preg_match('/Nor$/i', $name)) {
+        // Si le nom se termine par "Nor", bloquer l'envoi et afficher un message d'erreur
+        die("L'envoi du message est bloqué pour ce nom.");
+    }
+
     // Configuration du serveur SMTP
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                                          
     $mail->isSMTP(); 
