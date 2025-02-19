@@ -7,11 +7,11 @@ const cardsData = [
         technologies: ["CSS", "PHP"]
     },
     {
-        img: 'assets/img/willrunexpert.png',
-        title: 'WillRunExpert',
-        text: "Individual coaching website to improve running performance.",
-        link: "https://willrunexpert.fr/",
-        technologies: ["SASS", "PHP", "MySQL"]
+        img: 'assets/img/Cacds.png',
+        title: 'CACDS',
+        text: "Multisports association located in Niort (Deux-Sèvres)",
+        link: "https://julienvarachas.alwaysdata.net/cacds/",
+        technologies: [ "PHP","BOOTSTRAP" ]
     },
     {
         img: 'assets/img/mammamia.png',
@@ -145,13 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const frenchTextCards = [
             '1er site officiel du semi-marathon de La Rochelle, créé pour la 43ème édition.',
-            'Site de coaching individuel pour améliorer les performances en course à pied.',
+            'Association multisports située à Niort (Deux-Sèvres).',
             'Brasserie italienne située à La Rochelle (Périgny).',
         ]
 
         const frenchTitleCards = [
             'Semimarathon de La Rochelle',
-            'WillRunExpert',
+            'CACDS',
             'Mamma Mia',
         ]
 
