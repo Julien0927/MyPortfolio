@@ -2,7 +2,7 @@ const cardsData = [
     {
         img: 'assets/img/photo14.jpg',
         title: 'Semimarathon de La Rochelle',
-        text: "First official website!!! It was created for the 43rd edition of the La Rochelle half marathon.",
+        text: "First official website!!! It was created for the 43rd edition ",
         link: "https://semimarathonlarochelle.fr/",
         technologies: ["CSS", "PHP"]
     },

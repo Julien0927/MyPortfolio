@@ -134,7 +134,7 @@ a:link, a:visited, a:hover, a:active {
     width: 25rem; 
     position: relative; 
     overflow: hidden; 
-    min-height: 17rem;
+    height: 190px;
 }
 
 .card-img-top {
@@ -353,6 +353,7 @@ a:link, a:visited, a:hover, a:active {
     .navbar-collapse {
         display: flex;
         justify-content: flex-end;
+        width: 50%;
     }
     .background span {
         animation: none !important;
@@ -420,7 +421,7 @@ a:link, a:visited, a:hover, a:active {
         width: 20rem;
         margin: 0 auto;
         margin-bottom: 2rem;
-        min-height: 14rem;
+        height: 170px;
     }
     .card-img-top {
         width: 100%;

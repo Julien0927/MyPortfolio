@@ -7,7 +7,7 @@
                     <img src="assets/icones/JavaScript.svg" class="javascript" alt="JS">
                 </div>
                 <div class="d-flex justify-content-center gap-5 mt-5">
-                    <img src="assets/icones/sass.svg" class="sass" alt="Sass">
+                    <img src="assets/icones/tailwind-css-96.png" class="sass" alt="Sass">
                     <img src="assets/icones/bootstrap.svg" class="sass" alt="Sass">
                 </div>
             </div>
